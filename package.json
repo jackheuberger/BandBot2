@@ -2,7 +2,7 @@
   "name": "bandbotv2",
   "version": "1.0.0",
   "description": "Contraband's BandBot (but v2)",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

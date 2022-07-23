@@ -22,11 +22,13 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', async (req, res) => {
-    console.log(req.body)
+    //console.log(req.body)
     if(req.body.text.toLowerCase().includes('chazz')){
+        console.log('Received Chazz message')
         quote = await pullQuote()
         axios.post("https://api.groupme.com/v3/bots/post", {bot_id: process.env.BOT_ID, text: `"${quote}"`})
             .then((res) => {
+                console.log('Quote posted')
                 console.log(res)
             })
             .catch((err) => {
